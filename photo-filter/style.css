@@ -295,9 +295,12 @@ img {
 }
 
 canvas {
-  border: 1px solid #000;
-  width: 500px;
-  height: 500px;
+  display: none;
+  border: 1px solid red;
+  width: 100%;
+  object-fit: contain;
+  /* width: 500px;
+  height: 500px; */
 }
 
 @media (max-width: 1024px) {
@@ -326,7 +329,8 @@ canvas {
   .main {
     flex-wrap: wrap;
   }
-  .filters, .editor {
+  .filters,
+  .editor {
     max-width: 100%;
   }
   .fullscreen {

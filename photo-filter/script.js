@@ -4,6 +4,7 @@ let i = 0;
 const picture = document.querySelector('.image-container img');
 const btnReset = document.querySelector('.btn-reset');
 const btnNext = document.querySelector('.btn-next');
+const btnSave = document.querySelector('.btn-save');
 const btnFullscreen = document.querySelector('.fullscreen');
 const inputRangeElements = document.querySelectorAll('.filters input');
 const imageContainer = document.querySelector('.image-container');
@@ -114,35 +115,37 @@ function getImage() {
 }
 btnNext.addEventListener('click', getImage);
 
+// канвас
+const canvas = document.querySelector('#canvas');
 
+// формируем строку с примененными фильтрами
+const setFilter = (height) => {
+  let str = '';
+  inputRangeElements.forEach((input) => {
+    str += `${input.name === 'hue' ? 'hue-rotate' : input.name}(${
+      input.name === 'blur' ? input.value * (height / picture.height) : input.value}${input.dataset.sizing})`;
+  });
+  return str;
+};
 
+// сохранение картинки с фильтрами
+const drawImage = () => {
+  const img = new Image();
+  img.setAttribute('crossOrigin', 'anonymous');
+  img.src = picture.src;
+  img.onload = () => {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d');
 
-// // канвас
-// const canvas = document.querySelector('#canvas');
-// const picture = document.querySelector('.image-container img');
-// console.log(canvas);
+    ctx.filter = setFilter(img.height);
+    ctx.drawImage(img, 0, 0, img.width, img.height);
+    let link = document.createElement('a');
+    link.download = 'download.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    link.delete;
+  };
+};
 
-// function drawImage() {
-//     const img = new Image();
-//     img.setAttribute('crossOrigin', 'anonymous');
-//     img.src = picture.src;
-//     img.onload = function () {
-//         canvas.width = img.width;
-//         canvas.height = img.height;
-//         const ctx = canvas.getContext("2d");
-//         ctx.drawImage(img, 0, 0, img.width, img.height);
-//     };
-// }
-// drawImage();
-
-// const dataURL = canvas.toDataURL("image/jpeg");
-
-// // скачивание по клику на кнопку
-// const btnSave = document.querySelector('.btn-save');
-// btnSave.addEventListener('click', function () {
-//     let link = document.createElement('a');
-//     link.download = 'download.png';
-//     link.href = canvas.toDataURL();
-//     link.click();
-//     link.delete;
-// });
+btnSave.addEventListener('click', drawImage);
