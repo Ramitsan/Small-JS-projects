@@ -246,7 +246,7 @@ img {
 
 .github {
   display: block;
-  width: 120px;
+  width: 250px;
   height: 45px;
   padding-left: 45px;
   background-image: url('assets/svg/github.svg');
@@ -258,10 +258,16 @@ img {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   transition: 0.3s;
+  text-decoration: none;
 }
 
+.github:focus,
 .github:hover {
   color: #fff;
+}
+
+.github:active {
+  color: #00b4a4;
 }
 
 .rss {
