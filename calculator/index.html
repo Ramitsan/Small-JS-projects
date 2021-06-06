@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="description">
+    <details class="description__wrapper">
+      <summary class="description__title">Инструкция</summary>
+      <ul class="description__list">
+        <li class="description__item">Для извлечения квадратного корня наберите число, например, 25, затем нажмите кнопку со знаком <b>√.</b>
+        </li>
+        <li class="description__item">Для ввода отрицательного числа наберите число, например, 5, затем нажмите кнопку со знаком <b>+\-.</b></li>
+        <li class="description__item">Для извлечения квадратного корня из отрицательного числа наберите число, например, 9, затем нажмите кнопку <b>+\-</b>, а затем - кнопку <b>√.</b></li>
+        <li class="description__item">Для операций с отрицательными числами вначале наберите число, например, 10, затем нажмите кнопку <b>+\-,</b> затем - кнопку со знаком операции,например, <b>*,</b> и далее второе число, например, 2.</li>
+        <li class="description__item">Для возведения в степень наберите число, например, 3, затем нажмите кнопку со знаком <b>^,</b> затем - показатель степени, например, 2.</li>
+      </ul>
+    </details>
+  </div>
+  <div class="calculator-grid">
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+    </div>
+    <button class="span-two" data-all-clear>AC</button>
+    <button data-delete>DEL</button>
+    <button data-sqrt>√</button>
+    <button data-operation>^</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>-</button>
+    <button class="row-two" data-operation>+</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>*</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>÷</button>
+    <button class="row-two" data-equals>=</button>
+    <button data-number>.</button>
+    <button class="span-two" data-number>0</button>
+    <button data-negative>+/-</button>
+  </div>
+</body>
+
+</html>
