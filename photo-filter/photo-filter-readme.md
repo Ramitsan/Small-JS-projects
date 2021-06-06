@@ -1,5 +1,7 @@
 ## Photo-filter / Фотофильтр
 
+![photofilter](https://user-images.githubusercontent.com/45296707/120938847-a5870380-c71d-11eb-85bb-c990a28b1e5f.jpg)
+
 GitHub Pages: https://ramitsan.github.io/Small-JS-projects/photo-filter/
 
 ### Структура и работа приложения
