@@ -1,5 +1,7 @@
 ## Virtual-piano / Виртуальное пианино
 
+![piano](https://user-images.githubusercontent.com/45296707/120938813-77092880-c71d-11eb-982c-0fede030b1ed.jpg)
+
 GitHub Pages: https://ramitsan.github.io/Small-JS-projects/virtual-piano/
 
 ### Структура приложения
