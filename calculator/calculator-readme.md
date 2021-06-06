@@ -1,5 +1,7 @@
 ## Calculator / Калькулятор
 
+![calculator](https://user-images.githubusercontent.com/45296707/120938890-c94a4980-c71d-11eb-90d1-31455e032c04.jpg)
+
 GitHub Pages: https://ramitsan.github.io/Small-JS-projects/calculator/
 
 Сделан на основе видеоурока https://www.youtube.com/watch?v=j59qQ7YWLxw&feature=youtu.be
